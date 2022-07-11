@@ -14,6 +14,7 @@ public class Main {
         System.out.println(myDoctor.CASA);
 
         // sobrecarga de metodos.
+        //La sobrecarga de métodos consiste en utilizar el mismo nombre en varios métodos, cada uno con distintos argumentos.
         Doctor myDoctorPepe =  new Doctor();
         Doctor myDoctorPepa = new Doctor("Pepa","Ciruganait ");
         System.out.println(myDoctorPepa.name);
