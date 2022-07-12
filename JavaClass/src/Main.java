@@ -1,3 +1,5 @@
+import java.util.Date;
+
 public class Main {
     public static void main(String[] args) {
         Doctor myDoctor =  new Doctor();
@@ -20,5 +22,17 @@ public class Main {
         System.out.println(myDoctorPepa.name);
         System.out.println(myDoctorPepa.speciality);
 
+        //Clases anidadas.
+        //Una clase dentro de otra.
+        //Clases estaticas: No se necesitan crear instancias para llamarlas.
+        //Solo se pueden llamar a los metodos estaticos.
+        //Clases Helper, Agrapudas por logica, Encapsulación.
+        myDoctor.addAvailableAppointment(new Date(), "4pm");
+        myDoctor.addAvailableAppointment(new Date(),  "6pm");
+
+        for (Doctor.AvailiableAppointment AV: myDoctor.getAvailableAppointment()
+             ) {
+            System.out.println(AV.getDate()+ " " +  AV.getTime());
+        }
     }
 }
