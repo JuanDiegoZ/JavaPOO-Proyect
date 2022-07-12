@@ -34,5 +34,20 @@ public class Main {
              ) {
             System.out.println(AV.getDate()+ " " +  AV.getTime());
         }
+
+
+
+        //Enum -- coleccion de constantes.
+         enum Tranport {
+            PLANE(600),TRAIN(80), AUTOMOBILE(50);
+            int speed;
+
+            Tranport(int s){
+                speed = s;
+
+            }
+        }
+        System.out.println(Tranport.AUTOMOBILE.speed);
+
     }
 }
