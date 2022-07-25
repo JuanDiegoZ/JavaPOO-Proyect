@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="model.Mai" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="model.Main" />
+    <module name="JavaClass" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../../../../../Program Files/Eclipse Adoptium/jdk-11.0.15.10-hotspot" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="model.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

@@ -1,14 +1,28 @@
+package model;
+
 import java.util.Date;
 import java.util.ArrayList;
 
-public class Doctor {
-    //variables estaticas.
-    static int nextValidId = 1;
-    //Constantes.
-    public final  static String  CASA = "PLANETA TIERRA";
-    int id;
-    String name;
+public class Doctor extends User {
     String speciality;
+
+    //Metodo constructor.
+    //mismo nombre de la clase que se inicializa.
+    //
+    public Doctor(String name, String email){
+        super(name,email);
+        System.out.println("El nombre del doctor asginado es:" + name);
+
+        this.speciality = speciality;
+    }
+
+    public String getSpeciality() {
+        return speciality;
+    }
+
+    public void setSpeciality(String speciality) {
+        this.speciality = speciality;
+    }
 
     //Clase anidada.
     public static  class  AvailiableAppointment {
@@ -54,28 +68,22 @@ public class Doctor {
         return availableAppointments;
     }
 
-    //Metodo constructor.
-    //mismo nombre de la clase que se inicializa.
-    //
-    Doctor(){
-        System.out.println("Metodo constructor!!");
-        id = nextValidId++;
-    }
-    // Sobrecarga de métodos y constructores:
-    Doctor(String name, String speciality){
-        this.name = name;
-        this.speciality = speciality;
-    }
+
     //Comportamientos
-    public void showName(){
-        System.out.println(name);
+
+
+    //Metodos sobreescritos.
+
+    @Override
+    public String toString() {
+        return super.toString() + " ,Specialiti: " + speciality + " ,Avalible:" + availableAppointments;
     }
-    public void showId(){
-        System.out.println("ID Doctor " + id);
-    }
-    public void showHouse(){
-        System.out.println("Nuestra casa es: " + CASA);
+
+    @Override
+    public void showDataUser() {
+        System.out.println("Hospital: San marino.");
+        System.out.println("Departamento: Oncologia.");
     }
 }
-// declarar un objeto:        Doctor  myDoctor;
-// Instanciando el objeto:    myDoctor = new Doctor;
+// declarar un objeto:        model.Doctor  myDoctor;
+// Instanciando el objeto:    myDoctor = new model.Doctor;
