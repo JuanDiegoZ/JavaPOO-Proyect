@@ -1,40 +1,42 @@
 package model;
 
-import java.security.PublicKey;
-
 public class Patient extends User {
-    //Attributes.
+    //Atributos
+    private String birthday;
     private double weight;
     private double height;
     private String blood;
+
     public Patient(String name, String email){
-        super(name, email);
-        this.weight = 54.5;
-        System.out.println(weight + "Kg");
-
+        super(name,email);
+        //mas instrucciones
     }
 
-    @Override
-    public void showDataUser() {
-        System.out.println("hola Soy un paciente.");
-    }
-    //get and set , short cut =  insert + alt
-
-
-    public double getWeight() {
-        return weight;
-    }
-
+    // 54.5
     public void setWeight(double weight) {
         this.weight = weight;
     }
 
-    public double getHeight() {
-        return height;
+    // 54.5 Kg. String
+    public String getWeight(){
+        return this.weight + " Kg.";
+    }
+
+
+    public String getHeight() {
+        return height + " Mts.";
     }
 
     public void setHeight(double height) {
         this.height = height;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
     }
 
     public String getBlood() {
@@ -44,4 +46,17 @@ public class Patient extends User {
     public void setBlood(String blood) {
         this.blood = blood;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nAge: " + birthday + "\n Weight: " +getWeight()+ "\n Height"+getHeight()+"\nBlood"+blood;
+    }
+
+    @Override
+    public void showDataUser() {
+        System.out.println("Paciente");
+        System.out.println("Historial completo desde naciemiento");
+
+    }
+
 }
